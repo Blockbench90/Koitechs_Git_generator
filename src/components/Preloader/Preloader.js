@@ -1,0 +1,20 @@
+import React from "react";
+import {Grid} from "@material-ui/core";
+
+import logo_loader from "../../assets/logo_loader.gif"
+import {useStyles} from "./style";
+
+
+const Preloader = () => {
+    const classes = useStyles()
+    return (
+        <Grid className={classes.container}>
+            <Grid className={classes.content}>
+                <img src={logo_loader} alt="logo_loader"/>
+                Generate resume...
+            </Grid>
+        </Grid>
+    )
+}
+
+export default Preloader
