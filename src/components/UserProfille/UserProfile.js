@@ -9,7 +9,7 @@ import RepoCard from "../RepoCard/RepoCard";
 import {useStyles} from "./style";
 
 
-const UserProfile = () => {
+const UserProfile = ({data, repos}) => {
     const classes = useStyles()
 
     return (
@@ -24,29 +24,33 @@ const UserProfile = () => {
 
                 <Grid className={classes.blockFlex}>
                     <Grid className={classes.blockItem}>
-                        <Avatar alt="avatar"
-                                src="https://avatars.githubusercontent.com/u/61389735?s=460&u=1f728e3e551fc8b29ea158e21d963a53901128f5&v=4"
-                                className={classes.avatar}/>
+                        <Avatar alt="avatar" src={data.avatar_url} className={classes.avatar}/>
                     </Grid>
-
                     <Grid className={classes.blockItem}>
-                        <Typography variant="body1" paragraph>name</Typography>
+                        {data.name && (<Typography variant="body1" paragraph>{data.name}</Typography>)}
 
-                        <Typography variant="body1" paragraph>login</Typography>
+                        {data.login && (<Typography variant="body1" paragraph>{data.login}</Typography>)}
 
-                        <Typography variant="body1" paragraph>public repositories: 100</Typography>
+                        {data.public_repos && (<Typography variant="body1" paragraph>public repositories: {data.public_repos}</Typography>)}
 
-                        <Typography variant="body1" paragraph>registered: 2020-30-05</Typography>
+                        {data.created_at && (<Typography variant="body1" paragraph>registered: {data.created_at}</Typography>)}
                     </Grid>
                 </Grid>
                 <br/>
                 <Grid className={classes.blockFlexRepo}>
-                    <RepoCard/>
-                    <RepoCard/>
-                    <RepoCard/>
-                    <RepoCard/>
-                    <RepoCard/>
-                    <RepoCard/>
+                    {repos.length > 0 ? (
+                        repos.map((repo, index) => {
+                                if(index < 10) {
+                                    return <RepoCard item={repo} key={repo.name}/>
+                                }
+                                return null
+                            }
+                        )
+                    ) : (
+                        <Grid className={classes.info}>
+                            <span>{data.name} does not has any repositories</span>
+                        </Grid>
+                    )}
                 </Grid>
             </Grid>
             <Footer/>

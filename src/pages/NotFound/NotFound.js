@@ -22,4 +22,4 @@ const NotFound = (props) => {
         </Grid>
     );
 };
-export default NotFound;
+export default NotFound

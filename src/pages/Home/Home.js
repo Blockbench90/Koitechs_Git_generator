@@ -11,7 +11,6 @@ const Home = () => {
     const history = useHistory()
     const [username, setUsername] = useState("")
     const [validationError, setValidationError] = useState(false)
-    console.log(username)
 
     const handleChange = (event) => {
         setUsername( event.target.value);
