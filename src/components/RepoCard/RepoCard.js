@@ -15,14 +15,13 @@ const RepoCard = ({item}) => {
     return (
         <Grid className={classes.card}>
 
-            <a href={url} style={{textDecoration: "none", color: "black"}}
-               target="_blank" rel="noopener noreferrer" >
-                <Typography variant="h6" style={{fontWeight: "bolder", wordBreak: "break-word"}}>
+                <Typography variant="h6" style={{fontWeight: "bolder", wordBreak: "break-word",}}>
+            <a href={url} style={{textDecoration: "none",  color: "#303030"}} target="_blank" rel="noopener noreferrer" >
                     {name}
-                </Typography>
             </a>
+                </Typography>
 
-            <Typography variant="body1" style={{wordBreak: "break-word"}}>
+            <Typography variant="subtitle2" style={{wordBreak: "break-word",color: "#999999", fontWeight: "700"}}>
                 {description ? description : null}
             </Typography>
 

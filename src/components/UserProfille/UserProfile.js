@@ -8,10 +8,12 @@ import Footer from "../Footer/Footer";
 import RepoCard from "../RepoCard/RepoCard";
 import {useStyles} from "./style";
 import Time from "../Time/Time";
+import PieChart from "../Canvas/canvas";
 
 
 const UserProfile = ({data, repos}) => {
     const classes = useStyles()
+
 
     return (
         <React.Fragment>
@@ -28,14 +30,19 @@ const UserProfile = ({data, repos}) => {
                         <Avatar alt="avatar" src={data.avatar_url} className={classes.avatar}/>
                     </Grid>
                     <Grid className={classes.blockItem}>
-                        {data.name && (<Typography variant="body1" paragraph>{data.name}</Typography>)}
+                        {data.name && (<Typography variant="h4" paragraph>{data.name}</Typography>)}
 
-                        {data.login && (<Typography variant="body1" paragraph>{data.login}</Typography>)}
+                        {data.login && (<Typography variant="h6" paragraph>{data.login}</Typography>)}
 
-                        {data.public_repos && (<Typography variant="body1" paragraph>public repositories: {data.public_repos}</Typography>)}
+                        {data.public_repos && (<Typography variant="subtitle2" paragraph>public repositories: {data.public_repos}</Typography>)}
 
-                        {data.created_at && (<Typography variant="body1" paragraph>registered: <Time date={data.created_at}/></Typography>)}
+                        {data.created_at && (<Typography variant="overline" paragraph>registered: <Time date={data.created_at}/></Typography>)}
+
                     </Grid>
+                </Grid>
+
+                <Grid className={classes.blockFlex} style={{marginBottom: "30px"}}>
+                    <PieChart language={repos} />
                 </Grid>
                 <br/>
                 <Grid className={classes.blockFlexRepo}>

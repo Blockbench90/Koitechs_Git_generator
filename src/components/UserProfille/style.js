@@ -5,8 +5,10 @@ export const useStyles = makeStyles((theme) => ({
         maxWidth: "80%",
         margin: "32px auto",
         padding: "16px",
-        background: "white",
+        // background: "white",
         borderRadius: "10px",
+        background: "#EEEEEE",
+
         "@media (min-width: 992px)": {
             maxWidth: "800px",
         },
@@ -39,6 +41,7 @@ export const useStyles = makeStyles((theme) => ({
     },
     blockItem: {
         padding: "0 16px",
+        color: "#3C4858"
     },
     info: {
         margin: "32px 0",

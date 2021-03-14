@@ -6,7 +6,7 @@ import NotFound from "./pages/NotFound/NotFound";
 import Resume from "./pages/Resume/Resume";
 import Home from "./pages/Home/Home";
 
-//TODO: fix small thinпs in css, and  tweak loading. Do it at home, on a normal monitor
+
 const App = () => (
     <Router>
         <Grid id="app">

@@ -13,9 +13,9 @@ export const useStyles = makeStyles((theme) => ({
     language: {
         display: "inline-block",
         margin: "0 8px 8px 0",
-        fontSize: "10px",
-        fontWeight: "bold",
-        color: 'blue'
+        fontSize: "14px",
+        color: "#999",
+        fontWeight: "700"
     },
     icon: {
         marginRight: "8px",

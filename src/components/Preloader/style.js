@@ -14,12 +14,13 @@ export const useStyles = makeStyles((theme) => ({
     content: {
         display: "block",
         margin: "0 auto",
-        width: "130px",
-        height: "130px",
+        width: "180px",
+        height: "180px",
         borderRadius: "40%",
         overflow: "hidden",
         "& img": {
-            width: "100%"
+            width: "130%",
+            marginLeft: "-26px"
         }
     },
 }));
