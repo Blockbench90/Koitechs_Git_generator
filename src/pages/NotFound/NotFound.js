@@ -1,6 +1,6 @@
 import React from "react";
 
-import {Grid} from "@material-ui/core";
+import {Grid, Typography} from "@material-ui/core";
 
 import error from "../../assets/404.png"
 import {useStyles} from "./style";
@@ -17,6 +17,7 @@ const NotFound = (props) => {
     return (
         <Grid id="not-found">
             <Grid className={classes.container}>
+                <Typography variant="body1" paragraph>Sorry User not found... </Typography>
                     <img src={error} alt="error"/>
             </Grid>
         </Grid>

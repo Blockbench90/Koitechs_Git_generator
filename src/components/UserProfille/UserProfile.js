@@ -7,6 +7,7 @@ import ArrowBackIcon from '@material-ui/icons/ArrowBack';
 import Footer from "../Footer/Footer";
 import RepoCard from "../RepoCard/RepoCard";
 import {useStyles} from "./style";
+import Time from "../Time/Time";
 
 
 const UserProfile = ({data, repos}) => {
@@ -33,7 +34,7 @@ const UserProfile = ({data, repos}) => {
 
                         {data.public_repos && (<Typography variant="body1" paragraph>public repositories: {data.public_repos}</Typography>)}
 
-                        {data.created_at && (<Typography variant="body1" paragraph>registered: {data.created_at}</Typography>)}
+                        {data.created_at && (<Typography variant="body1" paragraph>registered: <Time date={data.created_at}/></Typography>)}
                     </Grid>
                 </Grid>
                 <br/>
