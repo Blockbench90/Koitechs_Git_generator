@@ -1,6 +1,9 @@
 import {makeStyles} from "@material-ui/core";
 
 export const useStyles = makeStyles((theme) => ({
+    content: {
+        textAlign: "center"
+    },
     margin: {
         margin: theme.spacing(1),
     },

@@ -24,4 +24,17 @@ export const useStyles = makeStyles((theme) => ({
     iconAlign: {
         verticalAlign: "middle",
     },
+    name: {
+        fontWeight: "bolder",
+        wordBreak: "break-word",
+        "& a": {
+            textDecoration: "none",
+            color: "#303030"
+        }
+    },
+    description: {
+        wordBreak: "break-word",
+        color: "#999999",
+        fontWeight: "700"
+    }
 }));

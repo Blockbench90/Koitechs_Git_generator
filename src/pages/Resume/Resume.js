@@ -9,7 +9,6 @@ import Preloader from "../../components/Preloader/Preloader";
 import UserProfile from "../../components/UserProfille/UserProfile";
 
 
-
 const Resume = (props) => {
     const history = useHistory()
 
@@ -35,6 +34,7 @@ const Resume = (props) => {
                 console.log(err)
             }
         }
+
         fetch()
     }, [username, history])
 
@@ -44,6 +44,6 @@ const Resume = (props) => {
             <UserProfile data={data} repos={repos}/>
         </Grid>)
         :
-        (<Preloader />))
+        (<Preloader/>))
 }
 export default Resume

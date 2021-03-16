@@ -10,10 +10,10 @@ const Preloader = () => {
     return (
         <Grid className={classes.container}>
             <Grid className={classes.content}>
-                <div style={{overflow: "hidden", borderRadius: "10%"}}>
+                <div className={classes.logo}>
                     <img src={logo_loader} alt="logo_loader"/>
                 </div>
-                <span style={{fontWeight: 700, fontSize: "20px", paddingLeft: "10px"}}>
+                <span className={classes.title}>
                     Generate resume...
                 </span>
             </Grid>

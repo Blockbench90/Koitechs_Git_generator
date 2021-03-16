@@ -9,7 +9,7 @@ const SearchForm = ({handleSubmit, handleChange, validationError}) => {
     const classes = useStyles();
 
     return (
-        <Grid style={{ textAlign: "center" }} >
+        <Grid className={classes.content}>
             <form onSubmit={handleSubmit} >
                 <FormControl className="form">
                     <Grid className={classes.margin}>

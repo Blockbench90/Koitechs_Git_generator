@@ -23,4 +23,13 @@ export const useStyles = makeStyles((theme) => ({
             marginLeft: "-26px"
         }
     },
+    logo: {
+        overflow: "hidden",
+        borderRadius: "10%"
+    },
+    title: {
+        fontWeight: 700,
+        fontSize: "20px",
+        paddingLeft: "10px"
+    }
 }));
